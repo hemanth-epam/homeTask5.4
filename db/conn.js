@@ -13,7 +13,7 @@ sequelize
   });
 
 //define schema for data to be inserted
-const users = sequelize.define('user', {
+const users = sequelize.define('users', {
   id: {
     type: Sequelize.STRING,
     primaryKey: true
