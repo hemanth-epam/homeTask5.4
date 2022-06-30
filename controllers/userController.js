@@ -1,4 +1,5 @@
 const userService = require("../services/userService");
+const uuid = require("uuid");
 
 //get all users from db with help of services
 exports.getUsers = async (req, res) => {     
@@ -31,7 +32,8 @@ exports.getUsersById = async (req, res) => {
 
 //save user in db using services 
 exports.saveUser = async (req, res) => {
-    const { id, login, age, password } = req.body;
+    const { login, age, password } = req.body;
+    const id= uuid.v4();
     console.log(id);
     const isdeleted = false;
     try {

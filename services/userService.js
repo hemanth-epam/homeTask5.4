@@ -40,7 +40,7 @@ exports.getUserById = async (id) => {
 //save user data in db
 exports.saveUserInDB = async (id, login, age, password, isdeleted) => {
   try {
-    let res = await users.bulkCreate([                  //create doubt
+    let res = await users.bulkCreate([//create doubt
       { id: id, login: login, age: age, password: password, isdeleted: isdeleted },
     ]);
     return res;
